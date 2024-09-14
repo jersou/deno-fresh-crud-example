@@ -1,0 +1,6 @@
+services:
+  deno-fresh-crud-example:
+    image: deno-fresh-crud-example
+    build: .
+    ports:
+      - 8000:8000

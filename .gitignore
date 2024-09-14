@@ -1,0 +1,19 @@
+# dotenv environment variable files
+.env
+.env.development.local
+.env.test.local
+.env.production.local
+.env.local
+
+# Fresh build directory
+_fresh/
+# npm dependencies
+node_modules/
+database.sqlite
+/.idea/checkstyle-idea.xml
+/.idea/dataSources.xml
+/.idea/misc.xml
+/.idea/sonarlint.xml
+/.idea/vcs.xml
+/tmp/
+/.idea/google-java-format.xml
