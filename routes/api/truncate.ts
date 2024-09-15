@@ -6,9 +6,9 @@ import { setupLog } from "@/services/setupLog.ts";
 setupLog(log);
 
 export const handler: Handlers = {
-  POST(_req: Request, _ctx: FreshContext): Response {
+  async POST(_req: Request, _ctx: FreshContext): Promise<Response> {
     log.info("truncate");
-    truncate();
+    await truncate();
     sockets.forEach((s) => s.send(JSON.stringify({ type: "truncate" })));
     return new Response("done");
   },

@@ -7,7 +7,7 @@ export const handler = async (
   _ctx: FreshContext,
 ): Promise<Response> => {
   const data: DataType = await _req.json();
-  updateData(data.id, data.dataProp1);
+  await updateData(data.id, data.dataProp1);
   sockets.forEach((s) => s.send(JSON.stringify({ type: "update", data })));
   return new Response(`${data.id} deleted`);
 };

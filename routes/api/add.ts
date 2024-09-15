@@ -11,7 +11,7 @@ export const handler: Handlers = {
     const data: DataType = await _req.json();
     data.id = monotonicUlid();
     log.info("new data", data);
-    insert(data);
+    await insert(data);
     sockets.forEach((s) => s.send(JSON.stringify({ type: "insert", data })));
     return new Response(data.id);
   },

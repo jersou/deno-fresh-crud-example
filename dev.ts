@@ -1,4 +1,4 @@
-#!/usr/bin/env -S deno run -A --unstable-ffi --watch=static/,routes/,services/
+#!/usr/bin/env -S deno run -A --unstable-kv --unstable-ffi --watch=static/,routes/,services/
 
 import dev from "$fresh/dev.ts";
 import config from "@/fresh.config.ts";

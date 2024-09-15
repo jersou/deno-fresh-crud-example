@@ -11,7 +11,7 @@ export function AddData() {
           fetch("/api/add", {
             method: "POST",
             body: JSON.stringify({ dataProp1: ref.current?.value }),
-          })}
+          }).then(() => ref.current && (ref.current.value = ""))}
       >
         ➕ Add
       </Button>

@@ -1,16 +1,18 @@
-# Fresh project
+# Deno Fresh CRUD example
 
-Your new Fresh project is ready to go. You can follow the Fresh "Getting
-Started" guide here: https://fresh.deno.dev/docs/getting-started
+Basic Deno Fresh projet that use SQLite or DenoKV database, a Websocket and
+react-toastify.
 
-### Usage
-
-Make sure to install Deno: https://deno.land/manual/getting_started/installation
-
-Then start the project:
+Run with :
 
 ```
 deno task start
 ```
 
-This will watch the project directory and restart as necessary.
+## SQLite or DenoKV database
+
+To use DenoKV database, add `"@/services/db.ts": "./services/kv.ts",` in
+`imports` section of the `deno.json` file.
+
+To use SQLite database, remove `"@/services/db.ts": "./services/kv.ts",` from
+`imports` section of the `deno.json` file.

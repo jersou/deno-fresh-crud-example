@@ -1,4 +1,8 @@
 import { Database } from "@db/sqlite";
+import * as log from "@std/log";
+import { setupLog } from "@/services/setupLog.ts";
+setupLog(log);
+log.info("Use SQLite database");
 
 // or export const db = new Database(":memory:");
 export const db = new Database("database.sqlite");

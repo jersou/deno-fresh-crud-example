@@ -15,7 +15,7 @@ import * as $AddData from "./islands/AddData.tsx";
 import * as $ClearDatas from "./islands/ClearDatas.tsx";
 import * as $DataList from "./islands/DataList.tsx";
 import * as $WebsocketStatus from "./islands/WebsocketStatus.tsx";
-import { type Manifest } from "$fresh/server.ts";
+import type { Manifest } from "$fresh/server.ts";
 
 const manifest = {
   routes: {
